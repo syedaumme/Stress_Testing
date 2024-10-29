@@ -23,7 +23,7 @@ This Python script performs various system stress tests, including memory, disk,
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/yourusername/system-stress-test.git
+   git clone https://github.com/syedaumme/Stress_Testing.git
    cd system-stress-test
    ```
 
@@ -40,6 +40,6 @@ This Python script performs various system stress tests, including memory, disk,
 Run the script:
 
 ```bash
-python stress_test.py
+python app.py
 ```
 
