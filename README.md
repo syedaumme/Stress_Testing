@@ -35,7 +35,8 @@ This Python script performs various system stress tests, including memory, disk,
    pip install psutil mysql-connector-python
    ```
 
-## Usage
+## Note:
+It has a Jenkins File in it which is triggered automatically using ngrok and webhooks 
 
 Run the script:
 
