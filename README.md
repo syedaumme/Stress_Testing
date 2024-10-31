@@ -1,29 +1,21 @@
-# Stress_Testing
 
-## Overview
+# 🛠️ Stress Testing Suite 
 
-This Python-based system stress testing tool performs comprehensive tests across multiple system resources, including memory, disk, CPU, network, and MySQL database performance. Additionally, it features automated logging and alerting functionalities to monitor and notify users of resource consumption.
+## Overview 📋
 
-## Features
+Welcome to the **Stress Testing Suite**, a powerful Python-based tool to stress-test various system resources and analyze performance limits. Test your memory, disk, CPU, network, and MySQL database, all with automated logging, notifications, and container support! 
 
-- **Memory Stress Test**: Allocates a significant amount of memory to evaluate consumption levels and system response.
-- **Disk Stress Test**: Writes large files to disk and tracks disk space usage to understand limits and response under storage stress.
-- **Network Stress Test**: Simulates heavy network traffic to measure bandwidth usage and performance.
-- **CPU Stress Test**: Executes intensive calculations to assess CPU utilization under load.
-- **MySQL Stress Test**: Runs predefined SQL queries on a MySQL database to monitor performance under query load.
-- **Automated Logging with AI Suggestions**: `ai_suggestionsfile.py` uses the ChatGPT API to analyze stress logs and save performance improvement suggestions to `suggestions.txt`.
-- **WhatsApp Alerts**: `send_to_whatsapp.py` utilizes Twilio to send stress test suggestions and alerts directly to WhatsApp.
+## 🌟 Features
 
-## Requirements
+- 🧠 **Memory Stress Test**: Allocates memory and monitors usage.
+- 💾 **Disk Stress Test**: Writes large files to assess disk usage.
+- 🌐 **Network Stress Test**: Simulates heavy traffic to evaluate network bandwidth.
+- 🖥️ **CPU Stress Test**: Executes intensive calculations to gauge CPU performance.
+- 🛢️ **MySQL Stress Test**: Runs predefined SQL queries to measure database load handling.
+- 🤖 **AI-Driven Logging**: `ai_suggestionsfile.py` sends stress logs to the ChatGPT API and generates insights, saved in `suggestions.txt`.
+- 📲 **WhatsApp Alerts**: `send_to_whatsapp.py` leverages Twilio to send performance suggestions and alerts directly to WhatsApp for real-time notifications.
 
-- Python 3.x
-- `psutil` library
-- `mysql-connector` library
-- Docker (for containerized deployments)
-- `requests` (for API calls to ChatGPT)
-- `twilio` library (for WhatsApp messaging)
-
-### Installation
+## 📦 Installation
 
 1. **Clone the Repository**:
 
@@ -32,40 +24,45 @@ This Python-based system stress testing tool performs comprehensive tests across
    cd Stress_Testing
    ```
 
-2. **Install Required Libraries**:
+2. **Install Required Libraries** 📚:
 
-   Ensure all dependencies are installed:
+   Ensure you have the following installed:
 
    ```bash
    pip install psutil mysql-connector-python requests twilio
    ```
 
-3. **Docker Setup**:
+3. **Docker Setup 🐳**:
 
-   A Dockerfile is included for easy deployment in a containerized environment.
+   A pre-built Docker image is available on Docker Hub for quick deployment!
 
-   To build the Docker image:
+   - Pull the image:
 
-   ```bash
-   docker build -t stress_testing .
-   ```
+     ```bash
+     docker pull kulsum16/system-stress-test
+     ```
 
-   Run the container:
+   - Run the container:
 
-   ```bash
-   docker run -d --name stress_tester stress_testing
-   ```
+     ```bash
+     docker run -d --name stress_tester kulsum16/system-stress-test
+     ```
 
-## Running the Script
+## 🚀 Running the Script
 
-Once all dependencies are installed, you can start the stress tests by running:
+After installing dependencies, you can start the stress tests with:
 
 ```bash
 python app.py
 ```
 
-## CI/CD Integration
+Or, if using Docker:
 
-The project includes a `Jenkinsfile` that triggers automatically using ngrok and webhooks, enabling continuous integration and deployment for this stress-testing tool.
+```bash
+docker exec -it stress_tester python app.py
+```
 
----
+## 🔄 Continuous Integration with Jenkins
+
+The project includes a **Jenkinsfile** that automates CI/CD through ngrok and webhooks, ensuring every update is tested and deployed effortlessly!
+
