@@ -25,18 +25,18 @@ def analyze_logs(log_content):
     }
     
     headers = {
-        "x-rapidapi-key": os.getenv("RAPIDAPI_KEY"),  # Use environment variable for API key
+        "x-rapidapi-key": os.getenv("RAPIDAPI_KEY"),  # Use your API key
         "x-rapidapi-host": "cheapest-gpt-4-turbo-gpt-4-vision-chatgpt-openai-ai-api.p.rapidapi.com",
         "Content-Type": "application/json"
     }
 
-    # Sending request to Gemini API
+    # Sending request to API
     response = requests.post(url, json=payload, headers=headers)
 
     # Check for success
     if response.status_code == 200:
         response_data = response.json()
-        # Debugging: Print the entire response data
+        # Debugging
         print("Response Data:", json.dumps(response_data, indent=2))  # Pretty-print the response
 
         # Check if the expected keys are present
