@@ -1,5 +1,3 @@
-# File: send_to_whatsapp.py
-
 from twilio.rest import Client
 import os
 
