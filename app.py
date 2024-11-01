@@ -59,7 +59,7 @@ def network_stress_test():
     logging.info("Network stress test completed. Usage: %s% bytes sent+recieved", total_usage)
     return {
         "resource": "Network",
-        "usage": usage_percentage
+        "usage": total_usage
     }
 
 def cpu_stress_test():
