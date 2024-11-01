@@ -56,9 +56,7 @@ def network_stress_test():
         time.sleep(5)  # Simulate delay
     net_io = psutil.net_io_counters()
     total_usage = net_io.bytes_sent + net_io.bytes_recv
-    max_bandwidth = 100 * (1024 ** 2)  # Assuming 100 MB max for calculation
-    usage_percentage = (total_usage / max_bandwidth) * 100 if total_usage < max_bandwidth else 100
-    logging.info("Network stress test completed. Usage: %s%%", usage_percentage)
+    logging.info("Network stress test completed. Usage: %s% bytes sent+recieved", total_usage)
     return {
         "resource": "Network",
         "usage": usage_percentage
