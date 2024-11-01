@@ -7,4 +7,4 @@
 2024-10-30 09:32:29,718 - INFO - Starting CPU stress test.
 2024-10-30 09:33:00,806 - INFO - CPU stress test completed. Usage: 5.2%
 2024-10-30 09:33:48,461 - INFO - Starting MySQL stress test.
-2024-10-30 09:34:08,358 - INFO - MySQL stress test completed. CPU Usage: 1.0%, Memory Usage: 9.095971824785384%
+2024-10-30 09:34:08,358 - INFO - MySQL stress test completed. Memory Usage: 9.095971824785384%
