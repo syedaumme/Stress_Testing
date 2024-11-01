@@ -16,7 +16,7 @@ def analyze_logs(log_content):
         "messages": [
             {
                 "role": "user",
-                "content": "Give One line brief suggestions on the log analysis provided.\n\n"+log_content  # Send the actual log content
+                "content": "Give One line brief suggestions on the log analysis provided for each function.\n\n"+log_content  # Send the actual log content
             }
         ],
         "model": "gpt-4o",
