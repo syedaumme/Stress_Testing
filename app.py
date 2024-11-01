@@ -57,7 +57,7 @@ def network_stress_test():
     net_io = psutil.net_io_counters()
     duration=60
     total_usage = net_io.bytes_sent + net_io.bytes_recv
-    logging.info("Network stress test completed. Usage: %s% bytes per minute ", total_usage/duration)
+    logging.info("Network stress test completed. Usage: %s bytes per minute ", total_usage/duration)
     return {
         "resource": "Network",
         "usage": total_usage/duration
@@ -161,7 +161,6 @@ def main():
         if "error" in result:
             print(f"Error: {result['error']}")
         elif result["resource"] == "MySQL":
-            print(f"MySQL CPU Usage: {result['cpu_usage']}%")
             print(f"MySQL Memory Usage: {result['memory_usage']}%")
         else:
             print(f"{result['resource']} Usage: {result['usage']}%")
