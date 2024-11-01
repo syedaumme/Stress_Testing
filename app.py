@@ -55,11 +55,12 @@ def network_stress_test():
         random_data = random.randbytes(5 * 1024 * 1024)  # 5 MB of data
         time.sleep(5)  # Simulate delay
     net_io = psutil.net_io_counters()
+    duration=60
     total_usage = net_io.bytes_sent + net_io.bytes_recv
-    logging.info("Network stress test completed. Usage: %s% bytes sent+recieved", total_usage)
+    logging.info("Network stress test completed. Usage: %s% bytes per minute ", total_usage/duration)
     return {
         "resource": "Network",
-        "usage": total_usage
+        "usage": total_usage/duration
     }
 
 def cpu_stress_test():
